@@ -31,7 +31,7 @@ document.getElementById("shortenBTN").addEventListener("click", function () {
 
   if (urlValue.length > 0) {
     // URL SHortening
-    fetch(`https://api.shrtco.de/v2/shorten?url=${urlValue}`)
+    fetch(`https://api.shrtco.de/v2/shorten?url=${urlValue}`,{cache: 'no-cache'})
       .then((response) => response.json())
       .then((data) => {
         // Add links in a array
